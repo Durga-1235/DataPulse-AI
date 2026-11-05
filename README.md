@@ -1,101 +1,125 @@
 
-# DataPulse AI
 
-AI-Powered Data Quality, Anomaly Detection & Business Intelligence Platform.
+# 📊 DataPulse AI
+### AI-Powered Data Quality, Anomaly Detection & Business Intelligence Platform
 
-## Overview
+DataPulse AI is an end-to-end data analytics platform that processes raw sales data, identifies data quality issues, performs business analysis, detects unusual transactions using Machine Learning, and presents insights through an interactive dashboard.
 
-DataPulse AI is a data analytics platform that cleans raw sales data, identifies data quality issues, generates business insights, detects unusual transactions using Machine Learning, and presents results through an interactive dashboard.
+## 🚀 Key Features
 
-## Features
+- **Data Cleaning:** Handles missing values and duplicate records.
+- **Data Quality Monitoring:** Calculates missing values, duplicate records and data quality score.
+- **Business Analytics:** Calculates revenue, transactions, average order value and product performance.
+- **Interactive Dashboard:** Displays KPI cards, product filters and sales charts.
+- **Anomaly Detection:** Uses Isolation Forest to identify unusual transactions.
+- **REST API:** Provides analytics through FastAPI endpoints.
 
-- Data quality analysis
-- Missing value handling and duplicate removal
-- Business KPI analysis
-- Product-wise revenue analysis
-- Daily sales trend visualization
-- Machine Learning anomaly detection using Isolation Forest
-- Interactive Streamlit dashboard
-- REST APIs using FastAPI
+## 🛠️ Tech Stack
 
-## Tech Stack
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn, Isolation Forest |
+| Visualization | Streamlit, Plotly |
+| Backend API | FastAPI |
+| Version Control | Git, GitHub |
 
-- Python
-- Pandas, NumPy
-- Scikit-learn
-- Plotly
-- Streamlit
-- FastAPI
-- Uvicorn
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 DataPulse-AI/
 ├── backend/
-│   ├── main.py
-│   └── data_processor.py
+│   ├── data_processor.py
+│   └── main.py
+├── dashboard/
+│   └── app.py
 ├── data/
 │   ├── sales_data.csv
 │   └── processed_sales_data.csv
 ├── ml/
 │   └── anomaly_detector.py
-├── dashboard/
-│   └── app.py
 ├── reports/
-├── .gitignore
+│   ├── anomaly_results.csv
+│   ├── product_analysis.csv
+│   ├── daily_sales_analysis.csv
+│   └── daily_sales_chart.html
 ├── requirements.txt
 └── README.md
 ```
 
-## Run Locally
+## 📸 Dashboard Screenshots
 
-Install dependencies:
+### 1. Dashboard Overview
+![Dashboard Overview](screenshots/dashboard-overview.png)
+
+### 2. Sales Analysis
+![Sales Analysis](screenshots/sales-analysis.png)
+
+### 3. Anomaly Detection
+![Anomaly Detection](screenshots/anomaly-detection.png)
+
+
+## 📈 Sample Results
+
+| Metric | Result |
+|---|---:|
+| Total Revenue | ₹1,285,800 |
+| Total Transactions | 50 |
+| Average Order Value | ₹25,716 |
+| Anomalies Detected | 3 |
+| Data Quality Score | 100% after cleaning |
+
+## ⚙️ How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Durga-1235/DataPulse-AI.git
+cd DataPulse-AI
+```
+
+### 2. Create and activate virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run data processing:
-
-```bash
-python backend/data_processor.py
-```
-
-Run anomaly detection:
-
-```bash
-python ml/anomaly_detector.py
-```
-
-Run dashboard:
+### 4. Run the dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
 
-Run API:
+### 5. Run the FastAPI backend
+
+Open another terminal:
 
 ```bash
-uvicorn backend.main:app --reload --port 8000
+uvicorn backend.main:app --reload
 ```
 
-API documentation:
+Open API documentation:
 
-http://127.0.0.1:8000/docs
+`http://127.0.0.1:8000/docs`
 
-## Machine Learning
+## 🧠 Machine Learning
 
-Isolation Forest is used to identify unusual sales transactions.
+The project uses the Isolation Forest algorithm to identify unusual sales transactions based on numerical transaction features.
 
-## Project Results
+Anomaly detection is intended to highlight records for further investigation, not to prove fraud.
 
-- 50 cleaned transactions
-- ₹12,85,800 total revenue
-- 5 product categories
-- 3 detected anomalies
+## 🎯 Project Objective
 
-## Author
+To build a practical data intelligence solution that combines data engineering, data analytics, machine learning and business intelligence in one platform.
+
+## 👨‍💻 Author
 
 Durga T
-B.Tech – Artificial Intelligence and Data Science
