@@ -59,7 +59,6 @@ DataPulse-AI/
 ### 3. Anomaly Detection
 ![Anomaly Detection](screenshots/anomaly-detection.png)
 
-
 ## 📈 Sample Results
 
 | Metric | Result |
